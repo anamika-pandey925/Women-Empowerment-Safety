@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline';">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#7B3CF4" />
+  <meta name="background-color" content="#0F0F11" />
+  <meta name="description"
+    content="Suraksha - Women Safety & Empowerment App. Your Voice, Your Safety. A safe space for women to speak, learn, and take action." />
+  <meta name="keywords" content="women safety, empowerment, crisis support, self defense, legal advocacy" />
+  <meta name="author" content="Suraksha" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Suraksha" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="Suraksha" />
+  <meta name="msapplication-TileColor" content="#7B3CF4" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/icon-512x512.png" />
+
+  <!-- Splash Screen Images for iOS -->
+  <link rel="apple-touch-startup-image" href="/icon-512x512.png" />
+
+  <title>Suraksha - Women Safety</title>
+
+  <style>
+    /* Prevent pull-to-refresh on mobile */
+    body {
+      overscroll-behavior-y: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Safe area support for notched devices */
+    .safe-area-top {
+      padding-top: env(safe-area-inset-top);
+    }
+
+    .safe-area-bottom {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    /* Hide scrollbar but keep functionality */
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+
+    /* Prevent text selection on UI elements */
+    button,
+    .no-select {
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Animation for install prompt */
+    @keyframes slide-up {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .animate-slide-up {
+      animation: slide-up 0.3s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+          console.log('Service Worker Unregistered');
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
