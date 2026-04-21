@@ -19,21 +19,7 @@ Suraksha is a comprehensive, multi-layered safety ecosystem designed to empower 
 - **Community Forum**: A safe space for sharing experiences, seeking advice, and support.
 - **Know Your Rights**: Detailed education on POSH, Domestic Violence Act, and Cyber Laws.
 
----
-
-## 🎨 Integrated Projects (Portfolio)
-
-### 📊 TaskFlow
-A high-performance **MERN Stack** task management platform.
-- **Stack**: React, Next.js, Node.js, MongoDB, JWT Authentication.
-- **Features**: Real-time dashboard, task CRUD operations, priority filtering, and secure profile management.
-
-### 🌱 IoT Precision Agriculture
-AI-driven soil monitoring and crop recommendation system.
-- **Hardware**: Arduino, Soil Moisture & pH Sensors.
-- **Software**: Python Analytics, Data Visualization, AI Recommendation Engine.
-
----
+--
 
 ## 🛠️ Technical Stack
 
