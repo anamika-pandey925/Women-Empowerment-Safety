@@ -1,15 +1,16 @@
 const CACHE_NAME = 'suraksha-v1';
+const BASE_PATH = '/Women-Empowerment-Safety/';
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/hero_city_walk.jpg',
-  '/testimonial_street.jpg',
-  '/efforts_challenges.jpg',
-  '/education_empowerment.jpg',
-  '/culture_respect.jpg',
-  '/story_harassment.jpg',
-  '/story_institutional.jpg'
+  BASE_PATH,
+  BASE_PATH + 'index.html',
+  BASE_PATH + 'manifest.json',
+  BASE_PATH + 'hero_city_walk.jpg',
+  BASE_PATH + 'testimonial_street.jpg',
+  BASE_PATH + 'efforts_challenges.jpg',
+  BASE_PATH + 'education_empowerment.jpg',
+  BASE_PATH + 'culture_respect.jpg',
+  BASE_PATH + 'story_harassment.jpg',
+  BASE_PATH + 'story_institutional.jpg'
 ];
 
 // Install event - cache static assets
@@ -73,7 +74,7 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => {
         // Return offline fallback for navigation requests
         if (event.request.mode === 'navigate') {
-          return caches.match('/index.html');
+          return caches.match(BASE_PATH + 'index.html');
         }
         return new Response('Offline', { status: 503 });
       });
@@ -85,8 +86,8 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('push', (event) => {
   const options = {
     body: event.data?.text() || 'Stay safe with Suraksha',
-    icon: '/icon-192x192.png',
-    badge: '/icon-72x72.png',
+    icon: BASE_PATH + 'icon-192x192.png',
+    badge: BASE_PATH + 'icon-192x192.png',
     vibrate: [200, 100, 200],
     tag: 'suraksha-notification',
     requireInteraction: true,
@@ -107,7 +108,7 @@ self.addEventListener('notificationclick', (event) => {
   
   if (event.action === 'open' || !event.action) {
     event.waitUntil(
-      clients.openWindow('/')
+      clients.openWindow(BASE_PATH)
     );
   }
 });

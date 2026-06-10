@@ -5,6 +5,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/Women-Empowerment-Safety/',
   plugins: [
     react(),
     // VitePWA({...}) 

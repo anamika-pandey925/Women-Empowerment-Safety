@@ -7,8 +7,7 @@ import {
   Megaphone, PhoneCall, Star, Home, Siren, Wifi, MicOff,
   ShieldCheck, Lock, Handshake, Activity,
   Plus, Trash2, Settings, Share2, Search, Building,
-  LogOut, Filter, Download, Flag, Upload, CheckCircle, Video,
-  Briefcase, Award, Code, ExternalLink
+  LogOut, Filter, Download, Flag, Upload, CheckCircle, Video
 } from 'lucide-react';
 import { ThemeProvider } from 'next-themes';
 
@@ -1202,7 +1201,7 @@ function TestimonialSection() {
     <section ref={sectionRef} className="relative py-20 md:py-32 lg:py-48 overflow-hidden">
       <div className="testimonial-bg absolute inset-0">
         <img
-          src="/testimonial_street.jpg"
+          src={`${import.meta.env.BASE_URL}testimonial_street.jpg`}
           alt="Testimonial"
           className="w-full h-full object-cover"
         />
@@ -1425,7 +1424,7 @@ function EffortsSection() {
           <div className="efforts-image relative">
             <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="/efforts_challenges.jpg"
+                src={`${import.meta.env.BASE_URL}efforts_challenges.jpg`}
                 alt="Efforts and Challenges"
                 className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -1473,13 +1472,13 @@ function StoriesSection() {
       label: t('stories.story_1.label'),
       quote: t('stories.story_1.quote'),
       attribution: t('stories.story_1.attr'),
-      image: '/story_harassment.jpg'
+      image: `${import.meta.env.BASE_URL}story_harassment.jpg`
     },
     {
       label: t('stories.story_2.label'),
       quote: t('stories.story_2.quote'),
       attribution: t('stories.story_2.attr'),
-      image: '/story_institutional.jpg'
+      image: `${import.meta.env.BASE_URL}story_institutional.jpg`
     }
   ];
 
@@ -1929,7 +1928,7 @@ function EducationSection() {
           <div className="education-image">
             <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-card border border-transparent dark:border-gray-700">
               <img
-                src="/education_empowerment.jpg"
+                src={`${import.meta.env.BASE_URL}education_empowerment.jpg`}
                 alt="Education"
                 className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover"
               />
@@ -2008,7 +2007,7 @@ function CultureSection() {
           <div className="culture-image">
             <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-card border border-transparent dark:border-gray-700">
               <img
-                src="/culture_respect.jpg"
+                src={`${import.meta.env.BASE_URL}culture_respect.jpg`}
                 alt="Culture"
                 className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover"
               />

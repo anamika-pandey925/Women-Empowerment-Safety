@@ -2,57 +2,57 @@
   "name": "Suraksha - Women Safety",
   "short_name": "Suraksha",
   "description": "Women Safety & Empowerment App - Your Voice, Your Safety",
-  "start_url": "/",
+  "start_url": "/Women-Empowerment-Safety/",
   "display": "standalone",
   "background_color": "#0F0F11",
   "theme_color": "#7B3CF4",
   "orientation": "portrait",
-  "scope": "/",
+  "scope": "/Women-Empowerment-Safety/",
   "icons": [
     {
-      "src": "/icon-512x512.png",
+      "src": "/Women-Empowerment-Safety/icon-512x512.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/Women-Empowerment-Safety/icon-512x512.png",
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/Women-Empowerment-Safety/icon-512x512.png",
       "sizes": "128x128",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/Women-Empowerment-Safety/icon-512x512.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/Women-Empowerment-Safety/icon-512x512.png",
       "sizes": "152x152",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/Women-Empowerment-Safety/icon-512x512.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/Women-Empowerment-Safety/icon-512x512.png",
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/Women-Empowerment-Safety/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
@@ -67,15 +67,15 @@
       "name": "Emergency SOS",
       "short_name": "SOS",
       "description": "Trigger emergency alert",
-      "url": "/?action=sos",
-      "icons": [{ "src": "/icon-512x512.png", "sizes": "192x192" }]
+      "url": "/Women-Empowerment-Safety/?action=sos",
+      "icons": [{ "src": "/Women-Empowerment-Safety/icon-512x512.png", "sizes": "192x192" }]
     },
     {
       "name": "Get Help",
       "short_name": "Help",
       "description": "Access support services",
-      "url": "/#services",
-      "icons": [{ "src": "/icon-512x512.png", "sizes": "192x192" }]
+      "url": "/Women-Empowerment-Safety/#services",
+      "icons": [{ "src": "/Women-Empowerment-Safety/icon-512x512.png", "sizes": "192x192" }]
     }
   ]
 }
