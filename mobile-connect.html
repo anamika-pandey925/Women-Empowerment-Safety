@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect via Mobile</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0F0F11;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background: #1a1a2e;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            color: #7B3CF4;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .qr-wrapper {
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .url {
+            font-family: monospace;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            word-break: break-all;
+            user-select: all;
+        }
+
+        .note {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Scan to Connect</h1>
+        <p>Open the camera on your phone and scan this code to open the website instantly.</p>
+
+        <div class="qr-wrapper">
+            <!-- Using QR Server API for simplicity -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=http://192.168.0.105:5173"
+                alt="Scan QR Code" width="250" height="250">
+        </div>
+
+        <div class="url">http://192.168.0.105:5173</div>
+
+        <div class="note">
+            Ensure your phone is connected to the same WiFi network as this computer.<br>
+            (WiFi: hgu_lan)
+        </div>
+    </div>
+</body>
+
+</html>
